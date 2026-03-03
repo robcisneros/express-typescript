@@ -4,12 +4,10 @@
     // File Layout
     // "rootDir": "./src",
     "outDir": "./build",
-
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "target": "esnext",
+    "module": "commonjs",
+    "target": "es2022",
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],
@@ -35,8 +33,8 @@
 
     // Recommended Options
     "strict": true,
+    "esModuleInterop": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
