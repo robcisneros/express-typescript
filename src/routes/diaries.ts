@@ -9,6 +9,7 @@ router.get("/", (_, res) => {
 
 router.get("/:id", (req, res) => {
   const diary = diaryServices.findById(+req.params.id);
+  return diary ? res.send(diary) : res.sendStatus(404);
 });
 
 router.post("/", (_, res) => {
