@@ -21,7 +21,11 @@ router.post("/", (req, res) => {
 
     res.json(addedDiaryEntry);
   } catch (e) {
-    console.log(e);
+    res
+      .status(400)
+      .json(
+        e instanceof Error ? { error: e.message } : { error: "Unknown error" },
+      );
   }
 });
 
