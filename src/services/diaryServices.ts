@@ -25,5 +25,7 @@ export const addDiary = (newDiaryEntry: NewDiaryEntry): DiaryEntry => {
     id: Math.max(...diaries.map((d) => d.id)) + 1,
     ...newDiaryEntry,
   };
+
+  diaries.push(newDiary);
   return newDiary;
 };
